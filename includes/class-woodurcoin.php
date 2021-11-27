@@ -272,6 +272,9 @@ class WC_Gateway_Woodurcoin extends WC_Payment_Gateway
                 }
                 ?>
                 <div style="margin-top:10px;padding: 5px;">
+                    <?php echo __('Total', 'woodurcoin') . ': ' . $total_durcoin . ' ' .  $this->assetCode; ?>
+                </div>
+                <div style="margin-top:10px;padding: 5px;">
                     <a href="<?php echo $url; ?>">
                         <button style="padding:16px;"><?php echo __('Pay on Waves.Exchange', 'woodurcoin'); ?></button>
                     </a>
