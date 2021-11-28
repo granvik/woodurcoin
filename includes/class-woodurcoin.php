@@ -324,7 +324,7 @@ class WC_Gateway_Woodurcoin extends WC_Payment_Gateway
             $rate2 = (new WavesExchange)->getRate($usdnAssetId, $this->assetId);
         }
         // Full converting rate ( assignment fiat USD == USD-N )
-        $rate = $rate1 * $rate2;
+        $rate = $rate1 / $rate2;
         return ceil((10 ** $this->decimals) * $amount * $rate) / (10 ** $this->decimals);
     }
 
