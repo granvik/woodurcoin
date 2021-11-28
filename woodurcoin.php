@@ -70,6 +70,7 @@ function woodurcoin_url_handler()
             $order_id = preg_replace('/.*woodurcoin-pay-order-(\d*).*/', '$1', $_SERVER['REQUEST_URI']);
             $order = wc_get_order($order_id);
             wp_redirect($order->get_checkout_payment_url() . '&txId=' . $txId);
+            exit();
         }
     }
 }
